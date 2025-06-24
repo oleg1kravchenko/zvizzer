@@ -110,6 +110,43 @@ $(document).ready(function() {
     }
   });
 
+  //мобильное меню
+    $(".btn-menu-mobile").click(function() {
+		if ($(".menu-mobile").is(":hidden")) {
+			$(".menu-mobile").slideDown(200);
+      $(".btn-menu-mobile").addClass("active");
+      $(".body").addClass("no-scroll");
+		} else {
+			$(".menu-mobile").slideUp(200);
+      $(".btn-menu-mobile").removeClass("active");
+       $(".body").removeClass("no-scroll");
+		}
+	});
+
+      $(document).mouseup(function (e) {
+    var container = $(".menu-mobile");
+    if (container.has(e.target).length === 0){
+			$(".menu-mobile").slideUp(200);
+      $(".btn-menu-mobile").removeClass("active");
+       $(".body").removeClass("no-scroll");
+    }
+  });
+
+  $(".menu__haschild > a").click(function(e) {
+    e.preventDefault();
+		if ($(this).parent().hasClass("active")) {
+			$(this).parent().removeClass("active");
+      $(this).parent().siblings().show();
+      $(this).siblings(".menu__submenu").hide();
+       $(this).parent().parent().siblings().show();
+		} else {
+		  $(this).parent().addClass("active");
+      $(this).siblings(".menu__submenu").show();
+       $(this).parent().siblings().hide();
+       $(this).parent().parent().siblings().hide();
+		}
+	});
+
   //табы
 $('.tabs li a').click(function(event) {
     event.preventDefault();
