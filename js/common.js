@@ -68,6 +68,48 @@ $(document).ready(function() {
 		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
 	});
 
+
+  //выпадающее меню
+  $(".btn-catalog").click(function() {
+		if ($(".menu-dropdown").is(":hidden")) {
+			$(".menu-dropdown").slideDown(200);
+      $(".btn-catalog").addClass("active");
+      $(".header").addClass("header__menu");
+		} else {
+			$(".menu-dropdown").slideUp(200);
+      $(".btn-catalog").removeClass("active");
+       $(".header").removeClass("header__menu");
+		}
+	});
+
+    $(document).mouseup(function (e) {
+    var container = $(".menu-dropdown");
+    if (container.has(e.target).length === 0){
+			$(".menu-dropdown").slideUp(200);
+      $(".btn-catalog").removeClass("active");
+       $(".header").removeClass("header__menu");
+    }
+  });
+
+   //попап корзина
+  $(".btn-basket").click(function() {
+		if ($(".popup-cart").is(":hidden")) {
+			$(".popup-cart").slideDown(200);
+      $(".btn-basket").addClass("active");
+		} else {
+			$(".popup-cart").slideUp(200);
+      $(".btn-basket").removeClass("active");
+		}
+	});
+
+    $(document).mouseup(function (e) {
+    var container = $(".popup-cart");
+    if (container.has(e.target).length === 0){
+			$(".popup-cart").slideUp(200);
+      $(".btn-basket").removeClass("active");
+    }
+  });
+
   //табы
 $('.tabs li a').click(function(event) {
     event.preventDefault();
@@ -87,8 +129,7 @@ $('.tabs li a').click(function(event) {
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 
-	 // стайлер для select
-	 $('select').styler();
+
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
