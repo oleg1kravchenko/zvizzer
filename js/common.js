@@ -1,61 +1,87 @@
 $(document).ready(function() {
 
 
-	//слайдер
-  const $slider = $('.billbord__slider');
-  const $counter = $('.slider-counter');
-  const $current = $counter.find('.current');
-  const $total = $counter.find('.total');
-  const $circle = $('.circle-progress .progress');
+// Слайдер
+const $slider = $('.billbord__slider');
+const $counter = $('.slider-counter');
+const $current = $counter.find('.current');
+const $total = $counter.find('.total');
+const $circle = $('.circle-progress .progress');
 
-  const radius = 35;
-  const circumference = 2 * Math.PI * radius;
+const radius = 35;
+const circumference = 2 * Math.PI * radius;
+let isAutoPlay = true; // Флаг: autoplay или ручной переход
 
+$circle.css({
+  strokeDasharray: circumference,
+  strokeDashoffset: circumference
+});
+
+function updateCounter(slick, currentSlide = 0) {
+  const i = currentSlide + 1;
+  $current.text(i);
+  $total.text(slick.slideCount);
+}
+
+function startProgress() {
+  // Сбросим и плавно запустим анимацию через requestAnimationFrame
   $circle.css({
-    strokeDasharray: circumference,
+    transition: 'none',
     strokeDashoffset: circumference
   });
 
-  function updateCounter(slick, currentSlide = 0) {
-    const i = currentSlide + 1;
-    $current.text(i);
-    $total.text(slick.slideCount);
-  }
-
-  function startProgress() {
-    $circle.css({
-      transition: 'none',
-      strokeDashoffset: circumference
-    });
-    setTimeout(() => {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       $circle.css({
         transition: 'stroke-dashoffset 5s linear',
         strokeDashoffset: 0
       });
-    }, 50);
-  }
-
-  $slider.on('init reInit afterChange', function (event, slick, currentSlide) {
-    updateCounter(slick, currentSlide);
-    startProgress();
+    });
   });
+}
 
-  // Инициализация слайдера
-  $slider.slick({
-    arrows: false,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    lazyLoad: 'ondemand',
-	speed: 1000,
-    autoplaySpeed: 5000,
-    slidesToShow: 1,
-    slidesToScroll: 1
+function resetProgress() {
+  $circle.css({
+    transition: 'none',
+    strokeDashoffset: circumference
   });
+}
 
-    // Кастомные стрелки
-  $('.slider-prev').on('click', () => $slider.slick('slickPrev'));
-  $('.slider-next').on('click', () => $slider.slick('slickNext'));
+// Проверяем, это autoplay или ручная смена
+$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+  isAutoPlay = slick.paused === false;
+});
+
+// Обновление счётчика и запуск прогрессбара при автопрокрутке
+$slider.on('init afterChange', function (event, slick, currentSlide) {
+  updateCounter(slick, currentSlide);
+  if (isAutoPlay) startProgress();
+});
+
+// Инициализация слайдера
+$slider.slick({
+  arrows: false,
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  speed: 1000,
+  lazyLoad: 'ondemand',
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+// Кастомные стрелки + сброс прогрессбара при клике
+$('.slider-prev').on('click', () => {
+  resetProgress();
+  $slider.slick('slickPrev');
+});
+
+$('.slider-next').on('click', () => {
+  resetProgress();
+  $slider.slick('slickNext');
+});
+
 
 
   //слайдер каталога на мобильных
@@ -175,17 +201,40 @@ $(document).ready(function() {
 		$(this).toggleClass("active");
 	});
 
-  //табы
-$('.tabs li a').click(function(event) {
-    event.preventDefault();
-    $(this).parent().parent().find("li").removeClass('active');
-    $(this).parent().addClass('active');
-    $(".tab-pane").fadeOut(0);
-    var selectTab = $(this).attr("href");
-    $(selectTab).fadeIn(200);
+    //дополнительное меню
+    $(".btn-menu").click(function() {
+		if ($(".popup-menu").is(":hidden")) {
+			$(".popup-menu").slideDown(200);
+      $(".btn-menu").addClass("active");
+		} else {
+			$(".popup-menu").slideUp(200);
+      $(".btn-menu").removeClass("active");
+		}
+	});
 
-    $('.tab-pane').find(".slider-cards-mobile").slick('setPosition');
-  });
+  //сайдбар категорий
+    $(".menu-sidebar__haschild > a").click(function(e) {
+    e.preventDefault();
+		if ($(this).siblings("ul").is(":hidden")) {
+        $(this).parent().addClass("active");
+        $(this).siblings("ul").slideDown(200);
+		} else {
+        $(this).parent().removeClass("active");
+        $(this).siblings("ul").slideUp(200);
+		}
+	});
+
+  //табы
+  $('.tabs li a').click(function(event) {
+      event.preventDefault();
+      $(this).parent().parent().find("li").removeClass('active');
+      $(this).parent().addClass('active');
+      $(".tab-pane").fadeOut(0);
+      var selectTab = $(this).attr("href");
+      $(selectTab).fadeIn(200);
+
+      $('.tab-pane').find(".slider-cards-mobile").slick('setPosition');
+    });
 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
