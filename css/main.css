@@ -2313,7 +2313,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 	width: 23px;
 	height: 23px;
 }
-.subscribe__image > img {
+.subscribe__image > picture img {
     width: 345px;
 }
 .subscribe__image {
@@ -2364,7 +2364,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
         font-size: 18px;
         max-width: 149px;
     }
-    .subscribe__image > img {
+    .subscribe__image > picture img {
         width: 295px;
     }
     .subscribe__btn img {
@@ -2388,7 +2388,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
         font-size: 15px;
         max-width: 125px;
     }
-    .subscribe__image > img {
+    .subscribe__image > picture img {
         width: 265px;
     }
     .subscribe__list li {
@@ -2469,7 +2469,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 		width: 100%;
 		background: rgba(31, 31, 31, 0.5);
 	}
-	.subscribe__image > img {
+	.subscribe__image > picture img {
 		width: 295px;
 		margin: 0 auto;
 	}
