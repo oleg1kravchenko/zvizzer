@@ -147,6 +147,31 @@ $(document).ready(function() {
 		}
 	});
 
+    //дополнительное меню
+    $(".btn-menu").click(function() {
+		if ($(".popup-menu").is(":hidden")) {
+			$(".popup-menu").slideDown(200);
+      $(".btn-menu").addClass("active");
+		} else {
+			$(".popup-menu").slideUp(200);
+      $(".btn-menu").removeClass("active");
+		}
+	});
+
+      $(document).mouseup(function (e) {
+    var container = $(".popup-menu");
+    if (container.has(e.target).length === 0){
+			$(".popup-menu").slideUp(200);
+      $(".btn-menu").removeClass("active");
+    }
+  });
+
+  //добавить в корзину
+    $(".item-catalog__link").click(function(e) {
+      e.preventDefault();
+		$(this).toggleClass("active");
+	});
+
   //табы
 $('.tabs li a').click(function(event) {
     event.preventDefault();
@@ -165,7 +190,8 @@ $('.tabs li a').click(function(event) {
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
-
+	 // стайлер для select
+	 $('select').styler();
 
 
 	//Попап менеджер FancyBox
