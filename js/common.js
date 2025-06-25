@@ -16,14 +16,12 @@ $(document).ready(function() {
     strokeDashoffset: circumference
   });
 
-  // Обновление счётчика
   function updateCounter(slick, currentSlide = 0) {
     const i = currentSlide + 1;
     $current.text(i);
     $total.text(slick.slideCount);
   }
 
-  // Анимация прогресс-бара
   function startProgress() {
     $circle.css({
       transition: 'none',
@@ -37,7 +35,6 @@ $(document).ready(function() {
     }, 50);
   }
 
-  // Назначаем обработчики до инициализации
   $slider.on('init reInit afterChange', function (event, slick, currentSlide) {
     updateCounter(slick, currentSlide);
     startProgress();
@@ -49,11 +46,17 @@ $(document).ready(function() {
     dots: false,
     infinite: true,
     autoplay: true,
+    lazyLoad: 'ondemand',
 	speed: 1000,
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+    // Кастомные стрелки
+  $('.slider-prev').on('click', () => $slider.slick('slickPrev'));
+  $('.slider-next').on('click', () => $slider.slick('slickNext'));
+
 
   //слайдер каталога на мобильных
   $('.slider-cards-mobile').slick({
@@ -184,9 +187,6 @@ $('.tabs li a').click(function(event) {
     $('.tab-pane').find(".slider-cards-mobile").slick('setPosition');
   });
 
-  // Кастомные стрелки
-  $('.slider-prev').on('click', () => $slider.slick('slickPrev'));
-  $('.slider-next').on('click', () => $slider.slick('slickNext'));
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
