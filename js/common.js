@@ -110,6 +110,80 @@ $('.slider-next').on('click', () => {
 		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
 	});
 
+   //показать больше фильтров
+  $(".show-more-checkboxes").click(function() {
+		if ($(this).parents(".sidebar-catalog__item").find(".list-chekboxes_hidden .checkbox:nth-child(n+4)").is(":hidden")) {
+			$(this).parents(".sidebar-catalog__item").find(".list-chekboxes_hidden .checkbox:nth-child(n+4)").slideDown(200);
+      $(this).html("Скрыть");
+		} else {
+		$(this).parents(".sidebar-catalog__item").find(".list-chekboxes_hidden .checkbox:nth-child(n+4)").slideUp(200);
+     $(this).html("Показать все");
+		}
+	});
+
+    /*range slider*/
+
+  $('.input-range').each(function () {
+	var $range = $(this).find(".range-controls__slider"),
+		$from_input = $(this).find(".input-range__from"),
+		$to_input = $(this).find(".input-range__to"),
+		from = +$range.attr("from"),
+		to = +$range.attr("to"),
+		min = +$range.attr("min"),
+		max = +$range.attr("max");
+
+	function formatNumber(num) {
+		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+	}
+
+	function cleanNumber(str) {
+		return str.replace(/\s+/g, '');
+	}
+
+	$range.ionRangeSlider({
+		type: "double",
+		min: min,
+		max: max,
+		from: from,
+		to: to,
+		prettify_enabled: true,
+		onChange: function () {
+			updateValues();
+		}
+	});
+
+	$range = $range.data("ionRangeSlider");
+
+	var updateValues = function () {
+		var res = $range.result;
+		$from_input.val(formatNumber(res.from));
+		$to_input.val(formatNumber(res.to));
+	};
+
+	$from_input
+		.on("focus", function () {
+			this.value = cleanNumber(this.value);
+			this.selectionStart = this.value.length;
+		})
+		.on("input", function () {
+			var val = cleanNumber(this.value);
+			$range.update({ from: val });
+		})
+		.on("blur", updateValues);
+
+	$to_input
+		.on("focus", function () {
+			this.value = cleanNumber(this.value);
+			this.selectionStart = this.value.length;
+		})
+		.on("input", function () {
+			var val = cleanNumber(this.value);
+			$range.update({ to: val });
+		})
+		.on("blur", updateValues);
+
+	updateValues();
+});
 
   //выпадающее меню
   $(".btn-catalog").click(function() {
@@ -235,6 +309,49 @@ $('.slider-next').on('click', () => {
         $(this).parent().removeClass("active");
         $(this).siblings("ul").slideUp(200);
 		}
+	});
+
+    $(".sidebar-catalog__head").click(function() {
+    $(this).parent().toggleClass("active");
+    $(this).siblings().slideToggle(200);
+  });
+
+     $(".btn-open-sidebar").click(function() {
+    $(this).toggleClass("active");
+    $(".sidebar-catalog").slideToggle(200);
+  });
+
+  //счетчик
+  $('.quantity').each(function() {
+		var spinner = $(this),
+		input = spinner.find('input[type="number"]'),
+		btnUp = spinner.find('.quantity-up'),
+		btnDown = spinner.find('.quantity-down'),
+		min = input.attr('min'),
+		max = input.attr('max');
+
+		btnUp.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue >= max) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue + 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+
+		btnDown.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue <= min) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue - 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+
 	});
 
   //табы
