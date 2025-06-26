@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		html{box-sizing:border-box}*,::before,::after{box-sizing:inherit}::-webkit-input-placeholder{color:rgb(82,83,83);opacity:1}input{font-family:inherit}input{appearance:none}input[type="text"]{appearance:none}:link,:visited,:hover,:focus,:active{outline:0px}h1{padding:0px;margin:0px;font-weight:normal}.wrapper{overflow:hidden}a{text-decoration:none;outline:none}*{outline:none!important}ul{padding:0px;margin:0px}ul li{list-style-type:none;outline:none}img{outline:none;display:block}form{margin:0px}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:920px}}@media (min-width:1200px){.container{max-width:1170px}}.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-lg-3,.col-lg-9,.col-md-4,.col-md-6,.col-sm-6{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}@media (min-width:576px){.col-sm-6{-webkit-box-flex:0;flex:0 0 50%;max-width:50%}}@media (min-width:768px){.col-md-4{-webkit-box-flex:0;flex:0 0 33.3333%;max-width:33.3333%}.col-md-6{-webkit-box-flex:0;flex:0 0 50%;max-width:50%}}@media (min-width:992px){.col-lg-3{-webkit-box-flex:0;flex:0 0 25%;max-width:25%}.col-lg-9{-webkit-box-flex:0;flex:0 0 75%;max-width:75%}}@font-face{font-family:Manrope;src:local("Manrope  Thin"),local("Manrope--Thin"),url("fonts/Manrope-Thin.woff2") format("woff2"),url("fonts/Manrope-Thin.woff") format("woff"),url("fonts/Manrope-Thin.ttf") format("truetype");font-weight:100;font-style:normal}@font-face{font-family:Manrope;src:local("Manrope  Light"),local("Manrope--Light"),url("fonts/Manrope-Light.woff2") format("woff2"),url("fonts/Manrope-Light.woff") format("woff"),url("fonts/Manrope-Light.ttf") format("truetype");font-weight:300;font-style:normal}@font-face{font-family:Manrope;src:local("Manrope  Regular"),local("Manrope--Regular"),url("fonts/Manrope-Regular.woff2") format("woff2"),url("fonts/Manrope-Regular.woff") format("woff"),url("fonts/Manrope-Regular.ttf") format("truetype");font-weight:400;font-style:normal}@font-face{font-family:Manrope;src:local("Manrope  Medium"),local("Manrope--Medium"),url("fonts/Manrope-Medium.woff2") format("woff2"),url("fonts/Manrope-Medium.woff") format("woff"),url("fonts/Manrope-Medium.ttf") format("truetype");font-weight:500;font-style:normal}@font-face{font-family:Manrope;src:local("Manrope  Semi bold"),local("Manrope--Semi-bold"),url("fonts/Manrope-Semibold.woff2") format("woff2"),url("fonts/Manrope-Semibold.woff") format("woff"),url("fonts/Manrope-Semibold.ttf") format("truetype");font-weight:600;font-style:normal}@font-face{font-family:Manrope;src:local("Manrope  Extra Bold"),local("Manrope--Extra-Bold"),url("fonts/Manrope-ExtraBold.woff2") format("woff2"),url("fonts/Manrope-ExtraBold.woff") format("woff"),url("fonts/Manrope-ExtraBold.ttf") format("truetype");font-weight:800;font-style:normal}body{font-family:Manrope;font-size:18px;line-height:144%;color:rgb(255,255,255);overflow-x:hidden;margin:0px;background:rgb(0,0,0)}.container{max-width:1470px}.row>div{padding:0px 5px}.row{margin:0px -5px}@media (max-width:1600px){.container{max-width:1270px}}@media (max-width:1360px){.container{max-width:1100px}}@media (max-width:1200px){.container{max-width:994px}}.header{padding-top:15px;top:0px;left:0px;width:100%;z-index:900;position:absolute}.header__wrapper{position:relative;gap:10px;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.logo-wrap{gap:10px;display:flex;-webkit-box-align:center;align-items:center}.logo img{width:140px;height:auto}.logo-descr{width:181px;line-height:133%;letter-spacing:-0.02em;color:rgb(82,83,83);font-weight:800}.btn-catalog{height:60px;padding:0px 40px;gap:10px;color:rgb(255,255,255);font-weight:600;border:1px solid rgb(82,83,83);border-radius:50px;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.btn-catalog__icon{width:16px;height:16px;-webkit-box-flex:0;flex:0 0 auto;position:relative}.btn-catalog__icon::after,.btn-catalog__icon::before{position:absolute;display:block;content:" ";top:0px;left:0px;width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:contain}.btn-catalog__icon::before{background-image:url("img/sandwich.svg")}.btn-catalog__icon::after{background-image:url("img/close.svg");opacity:0}.header__search{width:27.6%}.header__search input{font-size:16px;padding-bottom:15px;width:100%;font-weight:800;color:rgb(255,255,255);border-top:none;border-right:none;border-left:none;border-image:initial;background:transparent;border-bottom:1px solid rgb(82,83,83)}.header__phone{font-size:24px;line-height:100%;font-weight:700;color:rgb(82,83,83);white-space:nowrap}.header__phone span{color:rgb(255,255,255)}.header__buttons{display:flex;-webkit-box-align:center;align-items:center}.btn-basket{height:60px;gap:10px;padding:0px 25px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;vertical-align:middle}.btn-basket__icon{width:24px;height:24px;-webkit-box-flex:0;flex:0 0 auto;background-image:url("img/cart.svg");background-repeat:no-repeat;background-position:center center;background-size:contain}.btn-basket__value{width:24px;height:24px;font-size:16px;line-height:150%;font-weight:700;text-align:center;color:rgb(0,0,0);display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;background:rgb(253,185,19);border-radius:50%;-webkit-box-flex:0;flex:0 0 auto}.btn-menu,.btn-user{width:60px;height:60px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background-repeat:no-repeat;background-position:center center}.btn-user{background-image:url("img/user.svg")}.btn-menu{background-image:url("img/dots.svg")}@media (max-width:1600px){body{font-size:16px}.logo-descr{width:160px}.logo-wrap{gap:8px}.logo img{width:125px}.header__phone{font-size:21px}.btn-menu,.btn-user{width:55px;height:55px}.btn-user{background-size:22px}.btn-menu{background-size:18px}.btn-basket{height:55px;gap:9px;padding:0px 22px}.btn-basket__icon{width:22px;height:22px}.btn-basket__value{width:22px;height:22px;font-size:14px}.btn-catalog{height:55px;padding:0px 35px;gap:8px}.header{padding-top:10px}}@media (max-width:1360px){body{font-size:14px}.logo img{width:112px}.header__phone{font-size:18px}.btn-menu,.btn-user{width:50px;height:50px}.btn-user{background-size:20px}.btn-menu{background-size:16px}.header__search input{font-size:14px;padding-bottom:11px}.logo-descr{width:140px}.btn-catalog{height:50px;padding:0px 30px;gap:7px}.btn-catalog__icon{width:14px;height:14px}.btn-basket{height:50px;gap:7px;padding:0px 19px}.btn-basket__icon{width:20px;height:20px}.btn-basket__value{width:20px;height:20px;font-size:12px}.header{padding-top:6px}}@media (max-width:1200px){body{font-size:12px}.header__search input{font-size:12px;padding-bottom:7px}.header__phone{font-size:16px}.logo-descr{width:122px}.logo img{width:100px}}@media (max-width:992px){.btn-catalog,.header__search,.header__wrapper .btn-menu,.header__wrapper .btn-user,.header__wrapper .logo-descr,.header__wrapper .header__phone{display:none}.logo img{width:91px;margin:-4px 0px}.header{position:fixed;top:0px;background:rgb(0,0,0);padding-top:0px}.btn-basket{height:40px;gap:5px;padding:0px 10px}.btn-basket__icon{width:16px;height:16px}.btn-menu-mobile{width:40px;height:40px;border-radius:50%;border:1px solid rgb(82,83,83);-webkit-box-flex:0;flex:0 0 auto;position:relative}.btn-menu-mobile::after,.btn-menu-mobile::before{position:absolute;display:block;content:" ";top:0px;left:0px;width:100%;height:100%;background-repeat:no-repeat;background-position:center center;background-size:16px}.btn-menu-mobile::before{background-image:url("img/sandwich.svg")}.btn-menu-mobile::after{background-image:url("img/close.svg");opacity:0}}@media (min-width:992px){.btn-menu-mobile{display:none}}.btn-main{height:60px;padding:10px 10px 10px 30px;gap:20px;font-size:16px;line-height:150%;font-weight:500;border:1px solid rgb(82,83,83);border-radius:50px;color:rgb(0,0,0);display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;text-align:center;font-family:Manrope}@media (max-width:1600px){.btn-main{height:55px;padding:7px 7px 7px 25px;gap:18px;font-size:14px}.btn-main svg{width:36px;height:auto}}@media (max-width:992px){body{font-size:16px;line-height:137%}}.row.row_main>div{margin-bottom:10px}.row.row_main{margin-bottom:-10px}@media (max-width:1360px){.btn-main{height:50px;padding:5px 5px 5px 20px;gap:14px;font-size:13px}.btn-main svg{width:32px}}@media (max-width:992px){.container{padding:0px 10px}.btn-main{font-size:14px;height:40px;gap:20px}.btn-main svg{width:30px}}.content-section{padding:100px 0px;margin:0px 35px;border-radius:30px;background:rgb(255,255,255);color:rgb(0,0,0)}.price-old{line-height:144%;text-decoration:line-through;color:rgb(129,129,129);white-space:nowrap;font-weight:600}.price-main{font-size:24px;font-weight:700;line-height:100%;white-space:nowrap;color:rgb(57,173,154)}@media (max-width:1600px){.content-section{padding:80px 0px;margin:0px 25px}.price-main{font-size:21px}}@media (max-width:1360px){.content-section{padding:60px 0px;margin:0px 15px}.price-main{font-size:18px}}@media (max-width:1200px){.price-main{font-size:16px}}@media (max-width:992px){.content-section{padding:30px 0px;border-radius:0px;margin:0px}.price-old{font-size:15px}.price-main{font-size:18px}}@media (min-width:992px){.show-mob{display:none!important}}.footer{padding-top:70px;padding-bottom:24px}.footer__title,.footer__menu{font-size:20px;line-height:130%;font-weight:600}.footer__menu li{margin-bottom:15px}.footer__menu a{color:rgb(255,255,255);border-bottom:1px solid transparent}.footer__title{margin-bottom:20px}.item-contact{gap:15px;margin-bottom:15px;line-height:133%;letter-spacing:-0.02em;color:rgb(255,255,255);font-weight:800;display:flex;-webkit-box-align:center;align-items:center}.item-contact_phone{font-size:24px}.item-contact__icon{width:60px;height:60px;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;border-radius:50%;background:linear-gradient(rgba(255,255,255,0.114) 0%,rgba(153,153,153,0.094) 100%);-webkit-box-flex:0;flex:0 0 auto}.socials-list{display:flex;-webkit-box-align:center;align-items:center}.socials-list a{width:60px;height:60px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-flex:0;flex:0 0 auto}.socials-list img{max-width:25px;max-height:25px}.footer .socials-list{margin-top:20px}.footer__menu{max-width:243px;margin-left:auto}.footer__navigations{max-width:255px;margin-left:auto}.footer__contacts{left:40px;position:relative}@media (max-width:1600px){.footer__title,.footer__menu{font-size:18px}.footer__menu{max-width:213px}.footer__navigations{max-width:230px}.item-contact__icon{width:55px;height:55px}.item-contact{gap:12px}.footer__contacts{margin-left:-15px}.socials-list img{transform:scale(0.9)}.socials-list a{width:55px;height:55px}.footer{padding-top:60px}.item-contact_phone{font-size:21px}}@media (max-width:1360px){.footer{padding-top:50px}.footer__title,.footer__menu{font-size:16px}.footer__title{margin-bottom:15px}.footer__menu{max-width:189px}.footer__navigations{max-width:203px}.footer__menu li{margin-bottom:12px}.footer__contacts{margin-left:-20px;left:28px}.item-contact{gap:10px;margin-bottom:12px}.socials-list a,.item-contact__icon{width:50px;height:50px}.socials-list img{transform:scale(0.8)}.footer .socials-list{margin-top:15px}.item-contact_phone{font-size:19px}}@media (max-width:1200px){.footer__title,.footer__menu{font-size:14px}.socials-list a,.item-contact__icon{width:45px;height:45px}.socials-list img{transform:scale(0.7)}.item-contact_phone{font-size:17px}}@media (max-width:992px){.footer{padding-top:30px}.footer .logo img{width:140px;margin:0px}.footer .logo-wrap{display:block}.item-contact{font-size:18px;gap:15px}.socials-list a,.item-contact__icon{width:60px;height:60px}.socials-list img{transform:none}.footer .row>div{margin-bottom:20px}.footer .socials-list{margin-top:20px}.footer__navigations{max-width:100%;margin:0px}.footer__title,.footer__menu{font-size:20px}.footer__title{margin-bottom:10px}.footer__menu{max-width:100%;margin:0px}.footer__menu li{margin-bottom:15px}.footer .row{margin-bottom:-20px}.item-contact_phone{font-size:24px}}.menu-dropdown{padding-top:15px;padding-bottom:25px;top:100%;left:0px;width:100%;background:rgb(0,0,0);position:absolute;border-top:1px solid rgba(0,0,0,0.2);display:none}.menu{width:33.333%}.menu{position:relative}.menu__submenu{padding-left:70px;left:100%;top:0px;height:100%;position:absolute;width:100%;opacity:0;visibility:hidden}.menu a{padding:15px 20px;line-height:144%;color:rgb(255,255,255);font-weight:600;display:flex;align-items:center;justify-content:space-between;border-radius:8px}.menu a::after{position:relative;display:block;content:" ";width:10px;height:16px;background-image:url("img/arrow.svg");background-repeat:no-repeat;background-position:center center;background-size:contain}.popup-cart{width:582px;top:100%;right:0px;padding:20px;z-index:10;color:rgb(0,0,0);border:1px solid rgb(217,217,217);border-radius:10px;background:rgb(255,255,255);position:absolute;display:none}.item-cart{padding:10px 0px;gap:20px;border-bottom:1px solid rgb(217,217,217);display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.item-cart__image{width:70px;height:70px;border-radius:15px;border:1px solid rgb(217,217,217)}.item-cart__title{font-size:14px;width:140px;display:block;line-height:129%;color:rgb(0,0,0);font-weight:600}.item-cart__count,.item-cart .price-main,.item-cart .price-old{font-size:16px;line-height:137%}.item-cart__prices .price-main{color:rgb(82,83,83)}.item-cart__prices{width:96px}.item-cart__count{font-weight:800;margin-left:auto}.popup-cart__list{max-height:360px;padding-right:20px;overflow:auto}.popup-cart__list::-webkit-scrollbar{appearance:none}.popup-cart__list::-webkit-scrollbar-thumb{background-color:rgb(129,129,129);border-radius:10px}.popup-cart__list::-webkit-scrollbar-track{border-radius:10px;background-color:rgb(217,217,217)}.popup-cart__total{padding:20px 28px 20px 0px;gap:10px;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.popup-cart__total .price-main,.popup-cart__subtitle{font-size:20px;line-height:130%}.popup-cart__subtitle{font-weight:600}.popup-cart .btn-main{width:100%;-webkit-box-pack:justify;justify-content:space-between;border-color:rgb(217,217,217)}@media (max-width:1600px){.item-cart{padding:8px 0px;gap:16px}.item-cart__title{font-size:13px;width:133px}.item-cart__count,.item-cart .price-main,.item-cart .price-old{font-size:14px}.item-cart__prices{width:91px}.popup-cart{width:525px;padding:16px}.popup-cart__list{max-height:345px;padding-right:16px}.popup-cart__total{padding:17px 22px 17px 0px}.popup-cart__total .price-main,.popup-cart__subtitle{font-size:18px}}@media (max-width:992px){.popup-cart{right:-10px;left:-10px;width:auto;border-radius:0px;height:100vh;padding-bottom:140px;overflow:auto}.item-cart{flex-wrap:wrap}.popup-cart__list{max-height:initial;padding:0px;overflow:initial}.item-cart__title{font-size:14px;width:calc(100% - 95px)}.item-cart__count,.item-cart .price-main,.item-cart .price-old{font-size:16px}.item-cart__count{margin:0px}.popup-cart__total{padding:20px 28px 20px 0px}.popup-cart__total .price-main,.popup-cart__subtitle{font-size:20px}.popup-cart .btn-main{height:60px;padding:10px 10px 10px 30px;font-size:16px}.popup-cart .btn-main svg{width:40px;height:40px}.popup-cart{scrollbar-width:none}.popup-cart::-webkit-scrollbar{display:none}}.menu-mobile{padding-top:20px;height:100vh;padding-bottom:150px;overflow:auto;position:absolute;top:100%;left:0px;width:100%;background:rgb(0,0,0);display:none}.menu-mobile .menu{margin-bottom:20px;width:100%}.menu-mobile .menu__submenu{padding:0px;left:0px;display:none;position:relative;visibility:visible;opacity:1}.menu-mobile__title{padding:0px 20px;font-size:20px;margin-bottom:10px;line-height:130%;font-weight:800;color:rgb(253,185,19)}.menu-mobile .menu a{padding:10px 20px;font-size:18px;gap:10px}.menu-mobile{scrollbar-width:none}.menu-mobile::-webkit-scrollbar{display:none}.popup-menu{width:353px;top:100%;right:0px;border:1px solid rgb(217,217,217);border-radius:10px;position:absolute;background:rgb(255,255,255);display:none}.popup-menu__list a{padding:20px;border-radius:14px;letter-spacing:-0.02em;color:rgb(0,0,0);font-weight:800;display:block}@media (max-width:1600px){.popup-menu{width:330px}.popup-menu__list a{padding:17px}}@media (max-width:1360px){.popup-menu__list a{padding:15px}.popup-menu{width:310px}}@media (max-width:1200px){.popup-menu__list a{padding:13px}.popup-menu{width:280px}}.breadcrumbs{padding-top:138px;padding-bottom:30px;font-size:16px;line-height:137%;color:rgb(129,129,129);font-weight:600;display:flex;-webkit-box-align:center;align-items:center;flex-wrap:wrap}.breadcrumbs a{color:rgb(255,255,255);border-bottom:1px solid transparent}.breadcrumbs li::after{content:"—";margin:0px 5px}.breadcrumbs li:last-child::after{display:none}.page-categories{background-image:url("img/page_categories_bg.jpg");background-repeat:no-repeat;background-position:center top;background-size:100%}@supports (background-image:url('img/page_categories_bg.webp')){.page-categories{background-image:url("img/page_categories_bg.webp")}}@supports (background-image:url('img/page_categories_bg.avif')){.page-categories{background-image:url("img/page_categories_bg.avif")}}.page-categories .content-section{min-height:700px}.title-page{font-size:70px;margin-bottom:30px;line-height:100%;font-weight:600}.sidebar-categories__title{font-size:30px;margin-bottom:20px;font-weight:700;line-height:107%}.menu-sidebar{padding-right:20px}.menu-sidebar>li{margin-bottom:20px}.menu-sidebar>li>a{gap:10px;line-height:133%;letter-spacing:-0.02em;color:rgb(0,0,0);font-weight:800;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.menu-sidebar__haschild>a::after{position:relative;display:block;content:" ";width:15px;height:15px;background-image:url("img/arrow_down.svg");background-repeat:no-repeat;background-position:center center;background-size:contain}.menu-sidebar ul{margin-top:10px;padding-left:15px;display:none}.menu-sidebar ul li{margin-bottom:7px;font-size:16px;line-height:137%;font-weight:600}.menu-sidebar ul li:last-child{margin-bottom:0px}.menu-sidebar ul li a{color:rgb(129,129,129)}.unit-category{padding:23px 80px 23px 20px;height:173px;border:1px solid rgb(217,217,217);border-radius:20px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:start;align-items:flex-start;overflow:hidden;position:relative}.unit-category__arrow{width:12px;height:12px;margin-top:auto;background-image:url("img/arrow_main.svg");background-repeat:no-repeat;background-position:center center;background-size:contain;display:block}.unit-category__title{margin-bottom:10px;letter-spacing:-0.02em;color:rgb(0,0,0);font-weight:800;display:block;line-height:133%}.unit-category__descr{font-size:14px;line-height:140%;font-weight:500;color:rgb(129,129,129);display:block}.unit-category__image{width:130px;height:106px;border-radius:0px 20px 0px 0px;bottom:0px;right:0px;position:absolute}.unit-category__image img{height:100%;width:100%;object-fit:contain;font-family:"object-fit: contain;";border-radius:0px 20px 0px 0px;object-position:right bottom}@media (max-width:1600px){.unit-category__image{width:110px;height:91px}.unit-category{padding:18px 70px 18px 16px;height:155px}.menu-sidebar ul li{font-size:14px}.breadcrumbs{padding-top:122px;padding-bottom:26px;font-size:14px}.title-page{font-size:62px;margin-bottom:28px}.page-categories .content-section{min-height:600px}.unit-category__descr{font-size:12px}}@media (max-width:1360px){.breadcrumbs{padding-top:115px;padding-bottom:25px;font-size:13px}.title-page{font-size:55px}.menu-sidebar{padding-right:10px}.unit-category__image{width:100px;height:84px}.unit-category__title{margin-bottom:5px}.unit-category{padding:15px 60px 15px 14px;height:138px}.menu-sidebar ul li{font-size:12px}}@media (max-width:1200px){.menu-sidebar ul li{font-size:10px}}@media (max-width:992px){.sidebar-categories{display:none}.page-categories{background:none}.breadcrumbs{padding-top:80px;padding-bottom:10px}.page-categories .content-section{background:transparent;padding:0px 0px 30px;color:rgb(0,0,0)}.title-page{font-size:30px;margin-bottom:20px;line-height:107%}.unit-category{padding:23px 80px 23px 20px;height:173px;border:none;background:rgb(255,255,255)}.unit-category__descr{font-size:14px}.unit-category__image{width:130px;height:106px}.unit-category__title{max-width:150px}}
+	</style>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css?ver=1.2" />
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<!-- шапка сайта -->
+
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo-wrap">
+						<a href="/" class="logo">
+							<picture>
+								<source srcset="img/logo.avif" type="image/avif">
+								<source srcset="img/logo.webp" type="image/webp">
+								<img src="img/logo.png" alt="zvizzer" width="140" height="88">
+							</picture>
+						</a>
+						<div class="logo-descr">интернет-магазин автохимии</div>
+					</div>
+					<div class="btn-catalog"><div class="btn-catalog__icon"></div>каталог</div>
+					<div class="header__search">
+						<form>
+							<input type="text" placeholder="поиск" required>
+						</form>
+					</div>
+					<a href="tel:88007775511" class="header__phone">8 (800) <span>777 - 5511</span></a>
+					<div class="header__buttons">
+						<div class="btn-basket">
+							<div class="btn-basket__icon"></div>
+							<div class="btn-basket__value">2</div>
+						</div>
+						<a href="#" class="btn-user" aria-label="Личный кабинет"></a>
+						<div class="btn-menu" aria-label="Меню"></div>
+						<div class="btn-menu-mobile" aria-label="Мобильное меню"></div>
+					</div>
+					<!--попап меню-->
+					<nav class="popup-menu" aria-label="Дополнительное меню">
+						<ul class="popup-menu__list">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Условия возврат</a></li>
+							<li><a href="#">Оптовым клиентам</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Наши дилеры</a></li>
+							<li><a href="#">Акции</a></li>
+						</ul>
+					</nav>
+					<!--попап корзина-->
+					<div class="popup-cart">
+						<div class="popup-cart__list">
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+							<div class="item-cart">
+								<a href="#" class="item-cart__image">
+									<picture>
+										<source srcset="img/cart1.avif" type="image/avif">
+										<source srcset="img/cart1.webp" type="image/webp">
+										<img src="img/cart1.png" alt="Профессиональная полировальная машинка" width="70" height="70">
+									</picture>
+								</a>
+								<a href="#" class="item-cart__title">Профессиональная полировальная машинка</a>
+								<div class="item-cart__prices">
+									<div class="price-old">21 897,65 ₽</div>
+									<div class="price-main">88 034.23 ₽</div>
+								</div>
+								<div class="item-cart__count">10</div>
+								<div class="item-cart__total">
+									<div class="price-main">880 342.3 ₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup-cart__total">
+							<div class="popup-cart__subtitle">Итого:</div>
+							<div class="price-main">1 780 342.3 ₽</div>
+						</div>
+						<a href="#" class="btn-main">
+							<span>Перейти к оформлению</span>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="40" height="40" rx="20" fill="#FDB913"/>
+								<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--выпадающее меню-->
+			<nav class="menu-dropdown" aria-label="Основное меню">
+				<div class="container">
+					<ul class="menu">
+						<li>
+							<a href="#">Подготовка к полировке</a>
+							<ul class="menu__submenu">
+								<li>
+									<a href="#">Пасты полировальные</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Абразивные</a></li>
+										<li><a href="#">Финишные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Круги полировальные</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Абразивные</a></li>
+										<li><a href="#">Финишные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Полировка автомобиля</a>
+							<ul class="menu__submenu">
+								<li>
+									<a href="#">Глины и автоскрабы</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Абразивные</a></li>
+										<li><a href="#">Финишные</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Малярные ленты очистители</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Финишные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Шлифовальные абразивы</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Финишные</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Защитные покрытия</a>
+							<ul class="menu__submenu">
+								<li>
+									<a href="#">Спреи защитные</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Долговременная защита</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Абразивные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Аксессуары для нанесения</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Финишные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Оборудование</a>
+							<ul class="menu__submenu">
+								<li>
+									<a href="#">Полировальные машины</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Абразивные</a></li>
+										<li><a href="#">Финишные</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Эксцентриковые машинки</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Финишные</a></li>
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Мини машинки</a>
+									<ul class="menu__submenu">
+										<li><a href="#">Одношаговые</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--мобильное меню-->
+			<nav class="menu-mobile" aria-label="Мобильное меню">
+				<div class="menu-mobile__title">Каталог</div>
+				<ul class="menu">
+					<li class="menu__haschild">
+						<a href="#">Подготовка к полировке</a>
+						<ul class="menu__submenu">
+							<li class="menu__haschild">
+								<a href="#">Пасты полировальные</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Абразивные</a></li>
+									<li><a href="#">Финишные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Круги полировальные</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Абразивные</a></li>
+									<li><a href="#">Финишные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__haschild">
+						<a href="#">Полировка автомобиля</a>
+						<ul class="menu__submenu">
+							<li class="menu__haschild">
+								<a href="#">Глины и автоскрабы</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Абразивные</a></li>
+									<li><a href="#">Финишные</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Малярные ленты очистители</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Финишные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Шлифовальные абразивы</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Финишные</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__haschild">
+						<a href="#">Защитные покрытия</a>
+						<ul class="menu__submenu">
+							<li class="menu__haschild">
+								<a href="#">Спреи защитные</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Долговременная защита</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Абразивные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Аксессуары для нанесения</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Финишные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__haschild">
+						<a href="#">Оборудование</a>
+						<ul class="menu__submenu">
+							<li class="menu__haschild">
+								<a href="#">Полировальные машины</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Абразивные</a></li>
+									<li><a href="#">Финишные</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Эксцентриковые машинки</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Финишные</a></li>
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+							<li class="menu__haschild">
+								<a href="#">Мини машинки</a>
+								<ul class="menu__submenu">
+									<li><a href="#">Одношаговые</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="menu-mobile__title">Личный кабинет</div>
+				<ul class="menu">
+					<li><a href="#">Личные данные</a></li>
+					<li><a href="#">Мои заказы</a></li>
+					<li><a href="#">Мои адреса</a></li>
+					<li><a href="#">Акт сверки</a></li>
+					<li><a href="#">Мои подарки</a></li>
+					<li><a href="#">Решения для дизайна</a></li>
+				</ul>
+				<div class="menu-mobile__title">Пользователю</div>
+				<ul class="menu">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Условия возврата</a></li>
+					<li><a href="#">Оптовым клиентам</a></li>
+					<li><a href="#">Где купить</a></li>
+					<li><a href="#">Наши дилеры</a></li>
+					<li><a href="#">Акции</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- контент страницы -->
+
+		<main>
+
+			<!-- страница категорий -->
+
+			<section class="page-categories">
+				<div class="container">
+					<ul class="breadcrumbs">
+						<li><a href="#">Главная</a></li>
+						<li>Каталог</li>
+					</ul>
+					<h1 class="title-page">Каталог</h1>
+				</div>
+				<div class="content-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3">
+								<aside class="sidebar-categories" aria-label="меню категорий">
+									<div class="sidebar-categories__title">Категории</div>
+									<ul class="menu-sidebar">
+										<li class="menu-sidebar__haschild">
+											<a href="#">Подготовка к полировке</a>
+											<ul>
+												<li><a href="#">Пасты полировальные</a></li>
+												<li><a href="#">Круги полировальные</a></li>
+											</ul>
+										</li>
+										<li class="menu-sidebar__haschild">
+											<a href="#">Полировка автомобиля</a>
+											<ul>
+												<li><a href="#">Глины и автоскрабы</a></li>
+												<li><a href="#">Малярные ленты</a></li>
+												<li><a href="#">Шлифовальные абразивы</a></li>
+											</ul>
+										</li>
+										<li class="menu-sidebar__haschild">
+											<a href="#">Защитные покрытия</a>
+											<ul>
+												<li><a href="#">Спреи защитные</a></li>
+												<li><a href="#">Долговременная защита</a></li>
+												<li><a href="#">Аксессуары для нанесения</a></li>
+											</ul>
+										</li>
+										<li class="menu-sidebar__haschild">
+											<a href="#">Оборудование</a>
+											<ul>
+												<li><a href="#">Полировальные машины</a></li>
+												<li><a href="#">Эксцентриковые машинки</a></li>
+												<li><a href="#">Мини машинки</a></li>
+											</ul>
+										</li>
+									</ul>
+								</aside>
+							</div>
+							<div class="col-lg-9">
+								<div class="row row_main">
+									<div class="col-lg-3 col-md-4 col-sm-6">
+										<a href="#" class="unit-category">
+											<span class="unit-category__title">Подготовка <br>к полировке</span>
+											<span class="unit-category__descr">185 товаров</span>
+											<span class="unit-category__arrow"></span>
+											<span class="unit-category__image">
+												<picture>
+													<source srcset="img/unit_category1.avif" type="image/avif">
+													<source srcset="img/unit_category1.webp" type="image/webp">
+													<img src="img/unit_category1.png" alt="Подготовка к полировке" width="130" height="106">
+												</picture>
+											</span>
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-4 col-sm-6">
+										<a href="#" class="unit-category">
+											<span class="unit-category__title">Полировка автомобиля</span>
+											<span class="unit-category__descr">185 товаров</span>
+											<span class="unit-category__arrow"></span>
+											<span class="unit-category__image">
+												<picture>
+													<source srcset="img/unit_category2.avif" type="image/avif">
+													<source srcset="img/unit_category2.webp" type="image/webp">
+													<img src="img/unit_category2.png" alt="Полировка автомобиля" width="130" height="106">
+												</picture>
+											</span>
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-4 col-sm-6">
+										<a href="#" class="unit-category">
+											<span class="unit-category__title">Защитные покрытия</span>
+											<span class="unit-category__descr">185 товаров</span>
+											<span class="unit-category__arrow"></span>
+											<span class="unit-category__image">
+												<picture>
+													<source srcset="img/unit_category3.avif" type="image/avif">
+													<source srcset="img/unit_category3.webp" type="image/webp">
+													<img src="img/unit_category3.png" alt="Защитные покрытия" width="130" height="106">
+												</picture>
+											</span>
+										</a>
+									</div>
+									<div class="col-lg-3 col-md-4 col-sm-6">
+										<a href="#" class="unit-category">
+											<span class="unit-category__title">Оборудование</span>
+											<span class="unit-category__descr">185 товаров</span>
+											<span class="unit-category__arrow"></span>
+											<span class="unit-category__image">
+												<picture>
+													<source srcset="img/unit_category4.avif" type="image/avif">
+													<source srcset="img/unit_category4.webp" type="image/webp">
+													<img src="img/unit_category4.png" alt="Оборудование" width="130" height="106">
+												</picture>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- подвал сайта -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="logo-wrap">
+							<a href="/" class="logo">
+								<picture>
+									<source srcset="img/logo.avif" type="image/avif">
+									<source srcset="img/logo.webp" type="image/webp">
+									<img src="img/logo.png" alt="zvizzer" width="140" height="88" loading="lazy">
+								</picture>
+							</a>
+							<div class="logo-descr">интернет-магазин автохимии</div>
+						</div>
+						<ul class="socials-list hidden-mob">
+							<li><a href="#" target="_blank"><img src="img/soc_tg.svg" alt="telegram"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_wp.svg" alt="whatsapp"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_yt.svg" alt="youtube"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_vk.svg" alt="вконтакте"></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer__contacts">
+							<div class="item-contact item-contact_phone">
+								<div class="item-contact__icon">
+									<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.782 11.1197C13.222 10.5026 12.4941 10.5026 11.9108 11.1197C11.4722 11.5838 11.0382 12.0429 10.5996 12.507C10.4783 12.6354 10.3803 12.6601 10.2357 12.586C9.96968 12.4083 9.65237 12.2799 9.3864 12.0972C8.12185 11.2481 7.05328 10.1668 6.10603 8.9375C5.64408 8.32036 5.23345 7.67854 4.93948 6.93304C4.89281 6.77999 4.89281 6.70099 5.01414 6.57263C5.47609 6.13323 5.88672 5.67408 6.32535 5.20999C6.93196 4.56817 6.93196 3.82267 6.32535 3.18084C5.96138 2.79575 5.62075 2.43534 5.28011 2.07493C4.91614 1.68984 4.57551 1.30475 4.21154 0.944339C3.6516 0.351887 2.92366 0.351887 2.34038 0.944339C1.90176 1.40843 1.4678 1.86758 1.02917 2.33166C0.613877 2.77106 0.399231 3.28452 0.347902 3.87204C0.273242 4.8249 0.492555 5.74813 0.809859 6.64669C1.4678 8.52278 2.46171 10.1421 3.6516 11.6578C5.28011 13.7166 7.22126 15.336 9.48439 16.4913C10.5063 17.0047 11.5515 17.4145 12.6668 17.4935C13.4693 17.5429 14.1506 17.3158 14.7059 16.669C15.0699 16.2049 15.5085 15.8198 15.8958 15.3853C16.4791 14.7435 16.4791 13.9733 15.8958 13.3562C15.1912 12.6107 14.4866 11.8652 13.782 11.1197Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<a href="tel:+78005556066">+7 (800) 555 60 66</a>
+								</div>
+							</div>
+							<div class="item-contact item-contact_phone">
+								<div class="item-contact__icon">
+									<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.782 11.1197C13.222 10.5026 12.4941 10.5026 11.9108 11.1197C11.4722 11.5838 11.0382 12.0429 10.5996 12.507C10.4783 12.6354 10.3803 12.6601 10.2357 12.586C9.96968 12.4083 9.65237 12.2799 9.3864 12.0972C8.12185 11.2481 7.05328 10.1668 6.10603 8.9375C5.64408 8.32036 5.23345 7.67854 4.93948 6.93304C4.89281 6.77999 4.89281 6.70099 5.01414 6.57263C5.47609 6.13323 5.88672 5.67408 6.32535 5.20999C6.93196 4.56817 6.93196 3.82267 6.32535 3.18084C5.96138 2.79575 5.62075 2.43534 5.28011 2.07493C4.91614 1.68984 4.57551 1.30475 4.21154 0.944339C3.6516 0.351887 2.92366 0.351887 2.34038 0.944339C1.90176 1.40843 1.4678 1.86758 1.02917 2.33166C0.613877 2.77106 0.399231 3.28452 0.347902 3.87204C0.273242 4.8249 0.492555 5.74813 0.809859 6.64669C1.4678 8.52278 2.46171 10.1421 3.6516 11.6578C5.28011 13.7166 7.22126 15.336 9.48439 16.4913C10.5063 17.0047 11.5515 17.4145 12.6668 17.4935C13.4693 17.5429 14.1506 17.3158 14.7059 16.669C15.0699 16.2049 15.5085 15.8198 15.8958 15.3853C16.4791 14.7435 16.4791 13.9733 15.8958 13.3562C15.1912 12.6107 14.4866 11.8652 13.782 11.1197Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<a href="tel:+74996656239">+7 (499) 665 62 39</a>
+								</div>
+							</div>
+							<div class="item-contact">
+								<div class="item-contact__icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.5785 12.527C10.3896 12.645 10.1771 12.6923 9.98819 12.6923C9.79929 12.6923 9.58678 12.645 9.39787 12.527L0 6.78906V14.416C0 16.0453 1.32231 17.3676 2.95159 17.3676H17.0484C18.6777 17.3676 20 16.0453 20 14.416V6.78906L10.5785 12.527Z" fill="#FDB913"/>
+										<path d="M17.0477 2.63281H2.95089C1.55774 2.63281 0.377103 3.62455 0.09375 4.94686L10.0111 10.9917L19.9048 4.94686C19.6215 3.62455 18.4409 2.63281 17.0477 2.63281Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<a href="mailto:info@autech.ru">info@autech.ru</a>
+								</div>
+							</div>
+							<div class="item-contact">
+								<div class="item-contact__icon">
+									<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.6658 0C6.6719 0 3.42261 3.2493 3.42261 7.2432C3.42261 12.1998 9.9046 19.4763 10.1806 19.7836C10.4398 20.0723 10.8924 20.0718 11.1511 19.7836C11.4271 19.4763 17.9091 12.1998 17.9091 7.2432C17.909 3.2493 14.6598 0 10.6658 0ZM10.6658 10.8875C8.6564 10.8875 7.02163 9.25266 7.02163 7.2432C7.02163 5.23375 8.65644 3.59898 10.6658 3.59898C12.6753 3.59898 14.31 5.23379 14.31 7.24324C14.31 9.2527 12.6753 10.8875 10.6658 10.8875Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<p>127410, г. Москва, <br>Алтуфьевское ш.,  <br class="show-mob">д. 37 стр. 32</p>
+								</div>
+							</div>
+							<div class="item-contact">
+								<div class="item-contact__icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10 0C8.02219 0 6.08879 0.586489 4.4443 1.6853C2.79981 2.78412 1.51808 4.3459 0.761209 6.17316C0.00433279 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.9889 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 9.99999C19.9971 7.34873 18.9425 4.8069 17.0678 2.93218C15.1931 1.05745 12.6513 0.00294095 10 0ZM13.0078 13.0078C12.7994 13.2161 12.5168 13.3331 12.2222 13.3331C11.9276 13.3331 11.645 13.2161 11.4367 13.0078L9.21444 10.7855C9.00606 10.5772 8.88895 10.2947 8.88889 9.99999V5.55555C8.88889 5.26087 9.00595 4.97825 9.21432 4.76988C9.4227 4.56151 9.70531 4.44444 10 4.44444C10.2947 4.44444 10.5773 4.56151 10.7857 4.76988C10.994 4.97825 11.1111 5.26087 11.1111 5.55555V9.54L13.0078 11.4367C13.2161 11.645 13.3331 11.9276 13.3331 12.2222C13.3331 12.5168 13.2161 12.7994 13.0078 13.0078Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<div class="item-contact__descr">Оптовый отдел:</div>
+									<p>Пн - Пт: 09:00 — 17:00</p>
+								</div>
+							</div>
+							<div class="item-contact">
+								<div class="item-contact__icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10 0C8.02219 0 6.08879 0.586489 4.4443 1.6853C2.79981 2.78412 1.51808 4.3459 0.761209 6.17316C0.00433279 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.9889 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 9.99999C19.9971 7.34873 18.9425 4.8069 17.0678 2.93218C15.1931 1.05745 12.6513 0.00294095 10 0ZM13.0078 13.0078C12.7994 13.2161 12.5168 13.3331 12.2222 13.3331C11.9276 13.3331 11.645 13.2161 11.4367 13.0078L9.21444 10.7855C9.00606 10.5772 8.88895 10.2947 8.88889 9.99999V5.55555C8.88889 5.26087 9.00595 4.97825 9.21432 4.76988C9.4227 4.56151 9.70531 4.44444 10 4.44444C10.2947 4.44444 10.5773 4.56151 10.7857 4.76988C10.994 4.97825 11.1111 5.26087 11.1111 5.55555V9.54L13.0078 11.4367C13.2161 11.645 13.3331 11.9276 13.3331 12.2222C13.3331 12.5168 13.2161 12.7994 13.0078 13.0078Z" fill="#FDB913"/>
+									</svg>
+								</div>
+								<div class="item-contact__content">
+									<div class="item-contact__descr">Розничный отдел:</div>
+									<p>Пн - Пт: 10:00 — 18:00</p>
+								</div>
+							</div>
+						</div>
+						<ul class="socials-list show-mob">
+							<li><a href="#" target="_blank"><img src="img/soc_tg.svg" alt="telegram"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_wp.svg" alt="whatsapp"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_yt.svg" alt="youtube"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc_vk.svg" alt="вконтакте"></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<nav class="footer__navigations" aria-label="Навигация по категориям">
+							<div class="footer__title">Защитные покрытия</div>
+							<ul class="footer__nav">
+								<li><a href="#">Спреи защитные</a></li>
+								<li><a href="#">Долговременная защита</a></li>
+								<li><a href="#">Аксессуары для нанесения</a></li>
+							</ul>
+							<div class="footer__title">Оборудование</div>
+							<ul class="footer__nav">
+								<li><a href="#">Полировальные машины</a></li>
+								<li><a href="#">Эксцентриковые машинки</a></li>
+								<li><a href="#">Мини машинки</a></li>
+							</ul>
+							<div class="footer__title">Подготовка к полировке</div>
+							<ul class="footer__nav">
+								<li><a href="#">Пасты полировальные</a></li>
+								<li><a href="#">Круги полировальные</a></li>
+							</ul>
+							<div class="footer__title">Полировка автомобиля</div>
+							<ul class="footer__nav">
+								<li><a href="#">Глины и автоскрабы</a></li>
+								<li><a href="#">Малярные ленты очистители</a></li>
+								<li><a href="#">Шлифовальные абразивы</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<nav class="footer__menu-wrap" aria-label="Служебная навигация">
+							<ul class="footer__menu">
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Возврат</a></li>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">Акции</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Оптовым покупателям</a></li>
+								<li><a href="#">Документы</a></li>
+								<li><a href="#">Покупка в кредит</a></li>
+								<li><a href="#">Температурные режимы </a></li>
+								<li><a href="#">хранения и перевозок</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="copyright">© Copyright 2025 <a href="#">Zvizzer Rus</a>. <br class="show-mob">Все права защищены.</div>
+					<a href="#">Договор офферты</a>
+					<a href="#">Пользовательское соглашение</a>
+					<a href="#">Информация о юридическом лице</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+	<script src="libs/mask/jquery.maskedinput.min.js"></script>
+	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+	<script src="js/common.js?ver=1.2"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+
+</html>
