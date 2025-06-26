@@ -428,15 +428,16 @@
 
 		<main>
 
-			<!-- страница категорий -->
+			<!-- страница подкатегорий -->
 
-			<section class="page-categories">
+			<section class="page-categories page-categories_sub">
 				<div class="container">
 					<ul class="breadcrumbs">
 						<li><a href="#">Главная</a></li>
-						<li>Каталог</li>
+						<li><a href="#">Каталог</a></li>
+						<li>Подготовка к полировке</li>
 					</ul>
-					<h1 class="title-page">Каталог</h1>
+					<h1 class="title-page">Подготовка к полировке</h1>
 				</div>
 				<div class="content-section">
 					<div class="container">
@@ -445,32 +446,32 @@
 								<aside class="sidebar-categories" aria-label="меню категорий">
 									<div class="sidebar-categories__title">Категории</div>
 									<ul class="menu-sidebar">
-										<li class="menu-sidebar__haschild">
+										<li class="menu-sidebar__haschild active">
 											<a href="#">Подготовка к полировке</a>
-											<ul>
+											<ul style="display: block;">
 												<li><a href="#">Пасты полировальные</a></li>
 												<li><a href="#">Круги полировальные</a></li>
 											</ul>
 										</li>
-										<li class="menu-sidebar__haschild">
+										<li class="menu-sidebar__haschild active">
 											<a href="#">Полировка автомобиля</a>
-											<ul>
+											<ul style="display: block;">
 												<li><a href="#">Глины и автоскрабы</a></li>
 												<li><a href="#">Малярные ленты</a></li>
 												<li><a href="#">Шлифовальные абразивы</a></li>
 											</ul>
 										</li>
-										<li class="menu-sidebar__haschild">
+										<li class="menu-sidebar__haschild active">
 											<a href="#">Защитные покрытия</a>
-											<ul>
+											<ul style="display: block;">
 												<li><a href="#">Спреи защитные</a></li>
 												<li><a href="#">Долговременная защита</a></li>
 												<li><a href="#">Аксессуары для нанесения</a></li>
 											</ul>
 										</li>
-										<li class="menu-sidebar__haschild">
+										<li class="menu-sidebar__haschild active">
 											<a href="#">Оборудование</a>
-											<ul>
+											<ul style="display: block;">
 												<li><a href="#">Полировальные машины</a></li>
 												<li><a href="#">Эксцентриковые машинки</a></li>
 												<li><a href="#">Мини машинки</a></li>
@@ -480,63 +481,391 @@
 								</aside>
 							</div>
 							<div class="col-lg-9">
-								<div class="row row_main">
-									<div class="col-lg-3 col-md-4 col-sm-6">
-										<a href="#" class="unit-category">
-											<span class="unit-category__title">Подготовка <br>к полировке</span>
-											<span class="unit-category__descr">185 товаров</span>
-											<span class="unit-category__arrow"></span>
-											<span class="unit-category__image">
-												<picture>
-													<source srcset="img/unit_category1.avif" type="image/avif">
-													<source srcset="img/unit_category1.webp" type="image/webp">
-													<img src="img/unit_category1.png" alt="Подготовка к полировке" width="130" height="106">
-												</picture>
-											</span>
+								<ul class="tags">
+									<li><a href="#">Пасты полировальные</a></li>
+									<li><a href="#">Круги полировальные</a></li>
+								</ul>
+								<a href="#" class="title-subcategory">Пасты полировальные</a>
+								<ul class="links-categories">
+									<li>
+										<a href="#">
+											<span class="links-categories__title">Абразивные</span>
+											<span class="links-categories__count">14</span>
 										</a>
-									</div>
-									<div class="col-lg-3 col-md-4 col-sm-6">
-										<a href="#" class="unit-category">
-											<span class="unit-category__title">Полировка автомобиля</span>
-											<span class="unit-category__descr">185 товаров</span>
-											<span class="unit-category__arrow"></span>
-											<span class="unit-category__image">
-												<picture>
-													<source srcset="img/unit_category2.avif" type="image/avif">
-													<source srcset="img/unit_category2.webp" type="image/webp">
-													<img src="img/unit_category2.png" alt="Полировка автомобиля" width="130" height="106">
-												</picture>
-											</span>
+									</li>
+									<li>
+										<a href="#">
+											<span class="links-categories__title">Финишные</span>
+											<span class="links-categories__count">8</span>
 										</a>
-									</div>
-									<div class="col-lg-3 col-md-4 col-sm-6">
-										<a href="#" class="unit-category">
-											<span class="unit-category__title">Защитные покрытия</span>
-											<span class="unit-category__descr">185 товаров</span>
-											<span class="unit-category__arrow"></span>
-											<span class="unit-category__image">
-												<picture>
-													<source srcset="img/unit_category3.avif" type="image/avif">
-													<source srcset="img/unit_category3.webp" type="image/webp">
-													<img src="img/unit_category3.png" alt="Защитные покрытия" width="130" height="106">
-												</picture>
-											</span>
+									</li>
+									<li>
+										<a href="#">
+											<span class="links-categories__title">Одношаговые</span>
+											<span class="links-categories__count">10</span>
 										</a>
+									</li>
+								</ul>
+								<div class="slider-products">
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory1.avif" type="image/avif">
+														<source srcset="img/subcategory1.webp" type="image/webp">
+														<img src="img/subcategory1.png" alt="Полировочная красная глина Joybond Red Clay, 200г." width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Полировочная красная глина Joybond Red Clay, <br>200г.</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">1 955.23 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-3 col-md-4 col-sm-6">
-										<a href="#" class="unit-category">
-											<span class="unit-category__title">Оборудование</span>
-											<span class="unit-category__descr">185 товаров</span>
-											<span class="unit-category__arrow"></span>
-											<span class="unit-category__image">
-												<picture>
-													<source srcset="img/unit_category4.avif" type="image/avif">
-													<source srcset="img/unit_category4.webp" type="image/webp">
-													<img src="img/unit_category4.png" alt="Оборудование" width="130" height="106">
-												</picture>
-											</span>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory2.avif" type="image/avif">
+														<source srcset="img/subcategory2.webp" type="image/webp">
+														<img src="img/subcategory2.png" alt="Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory3.avif" type="image/avif">
+														<source srcset="img/subcategory3.webp" type="image/webp">
+														<img src="img/subcategory3.png" alt="Абразивный шлифовальный круг Pyramid P6000 - 150мм Комплект 10шт" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Абразивный шлифовальный круг Pyramid P6000 - 150мм Комплект 10шт</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">9 153.97 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory4.avif" type="image/avif">
+														<source srcset="img/subcategory4.webp" type="image/webp">
+														<img src="img/subcategory4.png" alt="Квик-детейлер очиститель для быстрого ухода за ЛКП Clean & Gloss" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Квик-детейлер очиститель для быстрого ухода за ЛКП Clean & Gloss</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory1.avif" type="image/avif">
+														<source srcset="img/subcategory1.webp" type="image/webp">
+														<img src="img/subcategory1.png" alt="Полировочная красная глина Joybond Red Clay, 200г." width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Полировочная красная глина Joybond Red Clay, <br>200г.</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">1 955.23 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory2.avif" type="image/avif">
+														<source srcset="img/subcategory2.webp" type="image/webp">
+														<img src="img/subcategory2.png" alt="Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="button-subcategory">
+									<a href="#" class="btn-main btn-main_light">
+										<span>Все товары категории</span>
+										<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="40" height="40" rx="20" fill="#FDB913"/>
+											<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black"/>
+										</svg>
+									</a>
+								</div>
+								<a href="#" class="title-subcategory">Круги полировальные</a>
+								<ul class="links-categories">
+									<li>
+										<a href="#">
+											<span class="links-categories__title">Курги из Thermo Foam</span>
+											<span class="links-categories__count">14</span>
 										</a>
+									</li>
+								</ul>
+								<div class="slider-products">
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory5.avif" type="image/avif">
+														<source srcset="img/subcategory5.webp" type="image/webp">
+														<img src="img/subcategory5.png" alt="Полировочная красная глина Joybond Red Clay, 200г." width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Полировочная красная глина Joybond Red Clay, <br>200г.</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">1 955.23 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
 									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory6.avif" type="image/avif">
+														<source srcset="img/subcategory6.webp" type="image/webp">
+														<img src="img/subcategory6.png" alt="Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory7.avif" type="image/avif">
+														<source srcset="img/subcategory7.webp" type="image/webp">
+														<img src="img/subcategory7.png" alt="Абразивный шлифовальный круг Pyramid P6000 - 150мм Комплект 10шт" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Абразивный шлифовальный круг Pyramid P6000 - 150мм Комплект 10шт</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">9 153.97 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory8.avif" type="image/avif">
+														<source srcset="img/subcategory8.webp" type="image/webp">
+														<img src="img/subcategory8.png" alt="Квик-детейлер очиститель для быстрого ухода за ЛКП Clean & Gloss" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Квик-детейлер очиститель для быстрого ухода за ЛКП Clean & Gloss</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory5.avif" type="image/avif">
+														<source srcset="img/subcategory5.webp" type="image/webp">
+														<img src="img/subcategory5.png" alt="Полировочная красная глина Joybond Red Clay, 200г." width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Полировочная красная глина Joybond Red Clay, <br>200г.</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-main">1 955.23 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="item-catalog item-catalog_main">
+											<div class="badges">
+												<div class="badges__item">-30%</div>
+											</div>
+											<div class="item-catalog__top">
+												<a href="#" class="item-catalog__image">
+													<picture>
+														<source srcset="img/subcategory6.avif" type="image/avif">
+														<source srcset="img/subcategory6.webp" type="image/webp">
+														<img src="img/subcategory6.png" alt="Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий" width="351" height="352" loading="lazy">
+													</picture>
+												</a>
+												<div class="item-catalog__description">
+													<p>Zvizzer Thermo Pads HEAVY 140/20/125мм, 1 шт. Полировальный термостойкий поролоновый зелёный круг жёсткий 22 kPa. <br>арт. ZV-TP00014020GN/1</p>
+												</div>
+											</div>
+											<div class="item-catalog__content">
+												<a href="#" class="item-catalog__title">Интерфейс для шлифовки, очень жёсткий, 130/10/130мм, синий</a>
+												<div class="item-catalog__bottom">
+													<div class="prices-wrap">
+														<div class="price-old">1 897,65 ₽</div>
+														<div class="price-main">1 569.64 ₽</div>
+													</div>
+													<a href="#" class="item-catalog__link" aria-label="добавить в корзину"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="button-subcategory">
+									<a href="#" class="btn-main btn-main_light">
+										<span>Все товары категории</span>
+										<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="40" height="40" rx="20" fill="#FDB913"/>
+											<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black"/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>

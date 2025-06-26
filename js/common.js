@@ -97,6 +97,19 @@ $('.slider-next').on('click', () => {
 		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
 	});
 
+  //слайдер каталога
+   $('.slider-products').slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		touchThreshold: 1000,
+    variableWidth: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+	});
+
 
   //выпадающее меню
   $(".btn-catalog").click(function() {
