@@ -10,7 +10,7 @@ const $circle = $('.circle-progress .progress');
 
 const radius = 35;
 const circumference = 2 * Math.PI * radius;
-let isAutoPlay = true; // Флаг: autoplay или ручной переход
+let isAutoPlay = true; 
 
 $circle.css({
   strokeDasharray: circumference,
@@ -24,7 +24,6 @@ function updateCounter(slick, currentSlide = 0) {
 }
 
 function startProgress() {
-  // Сбросим и плавно запустим анимацию через requestAnimationFrame
   $circle.css({
     transition: 'none',
     strokeDashoffset: circumference
@@ -47,12 +46,10 @@ function resetProgress() {
   });
 }
 
-// Проверяем, это autoplay или ручная смена
 $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
   isAutoPlay = slick.paused === false;
 });
 
-// Обновление счётчика и запуск прогрессбара при автопрокрутке
 $slider.on('init afterChange', function (event, slick, currentSlide) {
   updateCounter(slick, currentSlide);
   if (isAutoPlay) startProgress();
@@ -135,6 +132,14 @@ $('.slider-next').on('click', () => {
 		asNavFor: '.slider-for',
 		prevArrow: '<div class="slick-prev slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+		responsive: [
+		{
+		breakpoint: 992,
+		settings: {
+			slidesToShow: 3,
+		}
+		}
+		]
 	});
 
 	 //слайдер вопросов
@@ -149,12 +154,22 @@ $('.slider-next').on('click', () => {
 		nextArrow: '<div class="slick-next slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
 	});
 
-	$('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-	$(this).find('video').each(function () {
-		this.pause();
-		this.currentTime = 0;
-	});
-	});
+  $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $(this).find('video').each(function () {
+      this.pause();
+      this.currentTime = 0;
+    });
+  });
+
+    $('.slider-for').on('afterChange', function(event, slick, currentSlide) {
+    let currentSlideEl = $(this).find('.slick-slide[data-slick-index="' + currentSlide + '"]');
+    let video = currentSlideEl.find('video')[0];
+    if (video) {
+      video.play().catch(() => {
+      });
+    }
+  });
+
 
 	  //слайдер каталога
    $('.slider-products-main').slick({
@@ -167,6 +182,19 @@ $('.slider-next').on('click', () => {
 		slidesToScroll: 1,
 		prevArrow: '<div class="slick-prev slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
 		nextArrow: '<div class="slick-next slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+	});
+
+	//слайдер заказов
+	  $('.slider-orders').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		touchThreshold: 1000,
+    variableWidth: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
 	});
 
    //показать больше фильтров
@@ -485,7 +513,7 @@ if ($('#date-picker').length > 0) {
     });
 
 
-	$(".input-phone").mask("+7 (999) 999-99-99");
+	$(".input-phone").mask("+7 999 999 99 99");
 
 	$(".input-date").mask("99/99/9999");
 
@@ -502,6 +530,13 @@ if ($('#date-picker').length > 0) {
     $input.attr('type', 'text');
   }
 });
+
+/*input file*/
+		$("input[type='file']").change(function(){
+			var filename_text = $(this).parent().siblings(".name-upload");
+			var filename = $(this).val().replace(/.*\\/, "");
+			filename_text.html(filename);
+		});
 
 	 // стайлер для select
 	 $('select').styler();
