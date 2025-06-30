@@ -4897,6 +4897,15 @@ input[type=number] {
 	border-radius: 20px;
 	overflow: hidden;
 }
+.slick-slide .slider-for__item video {
+	opacity: 0;
+		-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.slick-slide video.active {
+	opacity: 1;
+}
 .card-main {
 	margin-right: 30px;
 }

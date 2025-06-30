@@ -158,14 +158,20 @@ $('.slider-next').on('click', () => {
     $(this).find('video').each(function () {
       this.pause();
       this.currentTime = 0;
+	  this.classList.remove("active");
     });
   });
 
     $('.slider-for').on('afterChange', function(event, slick, currentSlide) {
     let currentSlideEl = $(this).find('.slick-slide[data-slick-index="' + currentSlide + '"]');
     let video = currentSlideEl.find('video')[0];
+	
     if (video) {
+		setTimeout(() => {
+			video.classList.add("active");
+		}, 100);
       video.play().catch(() => {
+		
       });
     }
   });
