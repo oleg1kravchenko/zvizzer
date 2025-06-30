@@ -71,7 +71,6 @@ $slider.slick({
   slidesToScroll: 1
 });
 
-// Кастомные стрелки + сброс прогрессбара при клике
 $('.slider-prev').on('click', () => {
   resetProgress();
   $slider.slick('slickPrev');
@@ -93,8 +92,8 @@ $('.slider-next').on('click', () => {
     variableWidth: true,
 		slidesToShow: 2,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
 	});
 
   //слайдер каталога
@@ -103,11 +102,71 @@ $('.slider-next').on('click', () => {
 		dots: false,
 		infinite: true,
 		touchThreshold: 1000,
-    variableWidth: true,
+    	variableWidth: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+	});
+
+	  //слайдер карточки
+   $('.slider-for').slick({
+		arrows: true,
+		dots: false,
+		infinite: false,
+		appendArrows: $(".slider-for-controls"),
+		touchThreshold: 1000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.slider-nav',
+		prevArrow: '<div class="slick-prev slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+	});
+
+	 $('.slider-nav').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		touchThreshold: 1000,
+		variableWidth: true,
+		focusOnSelect: true,
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		prevArrow: '<div class="slick-prev slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+	});
+
+	 //слайдер вопросов
+   $('.slider-questions').slick({
+		arrows: true,
+		dots: false,
+		infinite: false,
+		touchThreshold: 1000,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
+	});
+
+	$('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+	$(this).find('video').each(function () {
+		this.pause();
+		this.currentTime = 0;
+	});
+	});
+
+	  //слайдер каталога
+   $('.slider-products-main').slick({
+		arrows: true,
+		dots: false,
+		infinite: false,
+		touchThreshold: 1000,
+    	variableWidth: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17.4852L10.1566 16.3286L3.55652 9.72844L16.5572 9.72913V8.07185H3.75747L9.77133 2.05799L8.61399 0.900657L0.514719 8.99993L9 17.4852Z" fill="black"/></svg><div/>',
+		nextArrow: '<div class="slick-next slick-arrow slick-arrow_main"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 17.4852L6.84336 16.3286L13.4435 9.72844L0.442796 9.72913V8.07185H13.2425L7.22867 2.05799L8.38601 0.900657L16.4853 8.99993L8 17.4852Z" fill="black"/></svg><div/>',
 	});
 
    //показать больше фильтров
@@ -121,6 +180,37 @@ $('.slider-next').on('click', () => {
 		}
 	});
 
+
+	 //показать больше свойств
+  $(".card-content__features .link-page_features").click(function() {
+		if ($(this).parents(".card-content__features").find(".hidden-features").is(":hidden")) {
+			$(this).parents(".card-content__features").find(".hidden-features").slideDown(200);
+      		$(this).html("Скрыть");
+		} else {
+			$(this).parents(".card-content__features").find(".hidden-features").slideUp(200);
+			$(this).html("Все характерисики");
+		}
+	});
+
+	  $(".card-block .link-page_features").click(function() {
+		if ($(this).parents(".card-block").find(".hidden-features").is(":hidden")) {
+			$(this).parents(".card-block").find(".hidden-features").slideDown(200);
+      		$(this).html("Скрыть");
+		} else {
+			$(this).parents(".card-block").find(".hidden-features").slideUp(200);
+			$(this).html("Все характерисики");
+		}
+	});
+
+	$(".link-page_about").click(function() {
+		if ($(this).parents(".card-block").find(".text-card_hidden").is(":hidden")) {
+			$(this).parents(".card-block").find(".text-card_hidden").slideDown(200);
+      		$(this).html("Скрыть");
+		} else {
+			$(this).parents(".card-block").find(".text-card_hidden").slideUp(200);
+			$(this).html("Показать больше");
+		}
+	});
     /*range slider*/
 
   $('.input-range').each(function () {
@@ -318,7 +408,7 @@ $('.slider-next').on('click', () => {
 
      $(".btn-open-sidebar").click(function() {
     $(this).toggleClass("active");
-    $(".sidebar-catalog").slideToggle(200);
+    $(".sidebar-catalog, .sidebar-personal").slideToggle(200);
   });
 
   //счетчик
@@ -354,6 +444,34 @@ $('.slider-next').on('click', () => {
 
 	});
 
+$('.add-amounts__btn').click(function(event) {
+	event.preventDefault();
+
+	const $button = $(this);
+	const valueAmount = parseInt($button.attr('data-value'), 10);
+
+	const $input = $button.closest('.card-actions').find('.quantity input');
+	const oldValue = parseInt($input.val(), 10) || 0;
+
+	const newVal = oldValue + valueAmount;
+	$input.val(newVal);
+
+	$(this).siblings().removeClass("active");
+	$(this).addClass("active");
+});
+
+
+	//выбор даты
+if ($('#date-picker').length > 0) {
+		const elem = document.getElementById('date-picker');
+		const picker = new Datepicker(elem, {
+			format: 'dd/mm/yyyy',
+			language: 'ru',
+			autohide: true,
+		}); 
+		
+	}
+
   //табы
   $('.tabs li a').click(function(event) {
       event.preventDefault();
@@ -368,6 +486,22 @@ $('.slider-next').on('click', () => {
 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
+
+	$(".input-date").mask("99/99/9999");
+
+	//input password
+	$('.hide-password').on('click', function () {
+  const $btn = $(this);
+  const $input = $btn.closest('.item-form').find('input');
+  $btn.toggleClass('active');
+
+  if ($input.attr('type') === 'text') {
+    $input.attr('type', 'password');
+    
+  } else {
+    $input.attr('type', 'text');
+  }
+});
 
 	 // стайлер для select
 	 $('select').styler();
