@@ -412,16 +412,6 @@ $('.slider-next').on('click', () => {
 		$(this).toggleClass("active");
 	});
 
-    //дополнительное меню
-    $(".btn-menu").click(function() {
-		if ($(".popup-menu").is(":hidden")) {
-			$(".popup-menu").slideDown(200);
-      $(".btn-menu").addClass("active");
-		} else {
-			$(".popup-menu").slideUp(200);
-      $(".btn-menu").removeClass("active");
-		}
-	});
 
   //сайдбар категорий
     $(".menu-sidebar__haschild > a").click(function(e) {
@@ -518,6 +508,15 @@ if ($('#date-picker').length > 0) {
       $('.tab-pane').find(".slider-cards-mobile").slick('setPosition');
     });
 
+	$('.tabs-modals li a').click(function(event) {
+      event.preventDefault();
+      $(this).parent().parent().find("li").removeClass('active');
+      $(this).parent().addClass('active');
+      $(".tab-pane-modals").fadeOut(0);
+      var selectTab = $(this).attr("href");
+      $(selectTab).fadeIn(200);
+    });
+
 
 	$(".input-phone").mask("+7 999 999 99 99");
 
@@ -525,17 +524,17 @@ if ($('#date-picker').length > 0) {
 
 	//input password
 	$('.hide-password').on('click', function () {
-  const $btn = $(this);
-  const $input = $btn.closest('.item-form').find('input');
-  $btn.toggleClass('active');
+	const $btn = $(this);
+	const $input = $btn.closest('.item-form').find('input');
+	$btn.toggleClass('active');
 
-  if ($input.attr('type') === 'text') {
-    $input.attr('type', 'password');
-    
-  } else {
-    $input.attr('type', 'text');
-  }
-});
+	if ($input.attr('type') === 'text') {
+		$input.attr('type', 'password');
+		
+	} else {
+		$input.attr('type', 'text');
+	}
+	});
 
 /*input file*/
 		$("input[type='file']").change(function(){
@@ -552,10 +551,12 @@ if ($('#date-picker').length > 0) {
 	//Документация: http://fancybox.net/howto
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+	
 	$(".fancybox").fancybox({
 		autoFocus: false,
 		backFocus: false,
 	});
+	
 
 
 

@@ -22,7 +22,39 @@
 	<link rel="stylesheet" href="libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.min.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.5" />
+	<link rel="stylesheet" href="css/main.css?ver=1.7" />
+	<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Главная",
+				"item": "https://example.com/"
+				},
+				{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Подготовка к полироли",
+				"item": "https://example.com/catalog/"
+				},
+				{
+				"@type": "ListItem",
+				"position": 3,
+				"name": "Круги полировальные",
+				"item": "https://example.com/catalog/oborudovanie/"
+				},
+				{
+				"@type": "ListItem",
+				"position": 4,
+				"name": "Круги из Thermo Foam",
+				"item": "https://example.com/product/rotex"
+				}
+			]
+			}
+	</script>
 </head>
 
 <body>
@@ -56,7 +88,7 @@
 							<div class="btn-basket__icon"></div>
 							<div class="btn-basket__value">2</div>
 						</div>
-						<a href="#" class="btn-user" aria-label="Личный кабинет"></a>
+						<a href="#modal-authorization" class="btn-user fancybox" aria-label="Личный кабинет"></a>
 						<div class="btn-menu" aria-label="Меню"></div>
 						<div class="btn-menu-mobile" aria-label="Мобильное меню"></div>
 					</div>
@@ -1214,6 +1246,214 @@
 
 	</div>
 
+	<div id="modal-authorization" class="modal-block">
+		<div class="modal-wrap">
+			<ul class="tabs-modals">
+				<li><a href="#tab_modal2">Регистрация</a></li>
+				<li class="active"><a href="#tab_modal1">Вход</a></li>
+			</ul>
+			<div class="tab-container-modals">
+				<div class="tab-pane-modals" id="tab_modal1">
+					<form>
+						<div class="item-form">
+							<div class="item-form__title">Логин:</div>
+							<input type="text" value="best_seller" required>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Пароль:</div>
+							<input type="text" value="password1234">
+							<div class="hide-password"></div>
+						</div>
+						<button class="btn-main btn-main_light">
+							<span>Войти</span>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="40" height="40" rx="20" fill="#FDB913"/>
+								<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black"/>
+							</svg>
+						</button>
+						<div class="modal-wrap__links">
+							<a href="#modal-recover" class="fancybox">Забыл логин или пароль</a>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane-modals" id="tab_modal2">
+					<form>
+						<div class="item-form">
+							<div class="item-form__title">Имя*:</div>
+							<input type="text" value="Веселов Валерий" required>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Номер телефона*:</div>
+							<input type="tel" value="+7 960 555 99 99" class="input-phone" inputmode="numeric">
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Эл.почта*:</div>
+							<input type="email" placeholder="Введите эл. почту" inputmode="email" required>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Придумайте пароль*:</div>
+							<input type="password" value="password1234">
+							<div class="hide-password active"></div>
+						</div>
+						<div class="item-form">
+							<div class="item-form__title">Повторите пароль*:</div>
+							<input type="password" value="password1234">
+							<div class="hide-password active"></div>
+						</div>
+						<button class="btn-main btn-main_light">
+							<span>Зарегистрироваться</span>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="40" height="40" rx="20" fill="#FDB913"/>
+								<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black"/>
+							</svg>
+						</button>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" required checked/>
+								<span>Настоящим я выражаю свое Согласие на обработку персональных данных для цели информационной коммуникации</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" required checked/>
+								<span>Настоящим я подтверждаю, что ознакомился с Политикой обработки персональных данных</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"/>
+								<span>Подписаться на рассылку новостей</span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="modal-recover" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-middle">Восстановить пароль</div>
+			<form>
+				<div class="item-form">
+					<div class="item-form__title">Эл.почта*:</div>
+					<input type="email" placeholder="Введите эл. почту" inputmode="email" required>
+				</div>
+				<button class="btn-main btn-main_light">
+					<span>Отправить</span>
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="40" height="40" rx="20" fill="#FDB913" />
+						<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black" />
+					</svg>
+				</button>
+				<div class="modal-wrap__links">
+					<a href="#modal-authorization" class="fancybox">Я вспомнил пароль</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-question" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-middle">Задать вопрос</div>
+			<form>
+				<div class="item-form">
+					<div class="item-form__title">Имя*:</div>
+					<input type="text" value="Веселов Валерий" required>
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Эл.почта*:</div>
+					<input type="email" placeholder="Введите эл. почту" inputmode="email" required>
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Ваш вопрос:</div>
+					<textarea placeholder="Ваш вопрос"></textarea>
+				</div>
+				<button class="btn-main btn-main_light">
+					<span>Задать вопрос</span>
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="40" height="40" rx="20" fill="#FDB913" />
+						<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black" />
+					</svg>
+				</button>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" required checked />
+						<span>Настоящим я выражаю свое Согласие на обработку персональных данных для цели информационной коммуникации</span>
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" required checked />
+						<span>Настоящим я подтверждаю, что ознакомился с Политикой обработки персональных данных</span>
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" />
+						<span>Подписаться на рассылку новостей</span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-wholesalers" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-middle">Заявка на оптовые продажи</div>
+			<div class="subtitle-modal">Мы обязательно свяжемся с Вами </div>
+			<form>
+				<div class="item-form">
+					<div class="item-form__title">Имя*:</div>
+					<input type="text" value="Веселов Валерий" required>
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Номер телефона*:</div>
+					<input type="tel" value="+7 960 555 99 99" class="input-phone" inputmode="numeric">
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Эл.почта*:</div>
+					<input type="email" placeholder="Введите эл. почту" inputmode="email" required>
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">ИНН:</div>
+					<input type="text" placeholder="ИНН">
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Наименование компании:</div>
+					<input type="text" placeholder="Полное название Вашей организации">
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Род деятельности:</div>
+					<input type="text" placeholder="Род деятельности">
+				</div>
+				<div class="item-form">
+					<div class="item-form__title">Адрес интернет-страницы:</div>
+					<input type="text" placeholder="Адрес интернет-страницы">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" required checked />
+						<span>Настоящим я выражаю свое Согласие на обработку персональных данных для цели информационной коммуникации</span>
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" required checked />
+						<span>Настоящим я подтверждаю, что ознакомился с Политикой обработки персональных данных</span>
+					</label>
+				</div>
+				<button class="btn-main btn-main_light">
+					<span>Отправить данные</span>
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="40" height="40" rx="20" fill="#FDB913" />
+						<path d="M26 26H24.3643V16.666L15.1719 25.8594L14 24.6875L23.0508 15.6367H14.5459V14H26V26Z" fill="black" />
+					</svg>
+				</button>
+			</form>
+		</div>
+	</div>
+
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -1228,7 +1468,7 @@
 	<script src="libs/vanillajs-datepicker-master/dist/js/locales/ru.js"></script>
 	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
 	<script src="libs/ion.rangeSlider-master/js/ion.rangeSlider.min.js"></script>
-	<script src="js/common.js?ver=1.5"></script>
+	<script src="js/common.js?ver=1.7"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
