@@ -3614,6 +3614,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 		padding: 0;
 		padding-bottom: 30px;
 		color: #000;
+		min-height: initial;
 	}
 	.title-page {
 		font-size: 30px;
