@@ -5972,6 +5972,9 @@ input[type=number] {
     }
 }
 @media (max-width: 992px) {
+	.title-cart.title-cart_main {
+		margin-bottom: 20px;
+	}
 	.item-cart_page .item-cart__image {
 		width: 90px;
 		height: 90px;
