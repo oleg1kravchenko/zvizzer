@@ -1522,6 +1522,7 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 	display: flex;
 	align-items: center;
 	border-radius: 100px;
+	background-image: none;
 }
 .item-catalog__link::before {
 	position: relative;
