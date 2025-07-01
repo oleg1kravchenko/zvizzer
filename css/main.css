@@ -1317,6 +1317,16 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 	.categories {
 		background: transparent;
 	}
+    .item-category_1 .item-category__image {
+        -webkit-transform: scale(0.38);
+        -ms-transform: scale(0.38);
+        transform: scale(0.38);
+    }
+	 .item-category_6 .item-category__image {
+        -webkit-transform: scale(0.42);
+        -ms-transform: scale(0.42);
+        transform: scale(0.42);
+    }
 }
 
 
@@ -3610,19 +3620,26 @@ background: radial-gradient(55.14% 55.14% at 82.76% 98.5%, #57CFAC 0%, rgba(87, 
 		line-height: 107%;
 	}
 	.unit-category {
-    	padding: 23px 20px;
-    	height: 173px;
-    	padding-right: 80px;
+    	padding: 10px;
+    	height: 200px;
+		border-radius: 10px;
 		border: none;
 		background: #fff;
+	}
+	.unit-category__arrow {
+		display: none;
+	}
+	.unit-category__image {
+		width: 142px;
+		height: 115px;
+		right: -10px;
+	}
+	.unit-category__image img {
+	    border-radius: 0 10px 0 0;
 	}
     .unit-category__descr {
         font-size: 14px;
     }
-	.unit-category__image {
-    	width: 130px;
-    	height: 106px;
-	}
 	.unit-category__title {
 		max-width: 150px;
 	}
