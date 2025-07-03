@@ -12,10 +12,10 @@ body {
 .container {
 	max-width: 1470px;
 }
-.row > div {
+.row > div {  
 	padding: 0 5px;
 }
-.row {
+.row { 
 	margin: 0 -5px;
 }
 @media (max-width: 1600px) {
@@ -7302,7 +7302,7 @@ input[type=number] {
 		height: 187px;
 	}
 }
-
+ 
 /*Статья*/
 .article-content {
 	font-size: 16px;
@@ -7686,7 +7686,7 @@ input[type=number] {
 @media (max-width: 1360px) {
 .page-mockup {
     padding: 170px 0;
-}
+} 
 .mockup-block {
     width: 420px;
     padding: 32px;
@@ -7696,7 +7696,7 @@ input[type=number] {
     width: 50px;
 }
 .mockup-block__title {
-    font-size: 37px;
+    font-size: 37px; 
 }
 .mockup-block__descr {
     font-size: 13px;
