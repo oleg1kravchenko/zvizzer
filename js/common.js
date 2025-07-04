@@ -1,5 +1,36 @@
 $(document).ready(function() {
 
+	//валидация
+  $('form button').on('click', function (e) {
+    const form = $(this).closest('form');
+    let isValid = true;
+
+    form.find('.item-form').each(function () {
+      const input = $(this).find('input, textarea, select');
+      const value = $.trim(input.val());
+
+      if (value === '') {
+        $(this).addClass('item-form_error');
+        isValid = false;
+      } else {
+        $(this).removeClass('item-form_error');
+      }
+    });
+
+    if (!isValid) {
+      e.preventDefault(); // не отправлять форму
+    } else {
+      form.submit(); // можно принудительно отправить форму, если всё валидно
+    }
+  });
+
+
+  $(document).on('input change', '.item-form input, .item-form textarea, .item-form select', function () {
+    if ($(this).val().trim() !== '') {
+      $(this).closest('.item-form').removeClass('item-form_error');
+    }
+  });
+
 
 // Слайдер
 const $slider = $('.billbord__slider');

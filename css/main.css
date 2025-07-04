@@ -488,7 +488,7 @@ svg * {
 .billbord__title {
 	font-size: 100px;
 	line-height: 100px;
-	margin-bottom: 20px;
+	margin-bottom: 20px; 
 	display: inline-block;
 	vertical-align: middle;
 	background: -o-radial-gradient(2.83% 87.5%, 57.25% 57.25%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #CBD1D9;
@@ -503,7 +503,7 @@ svg * {
 .billbord__descr {
 	font-size: 24px;
 	line-height: 100%;
-	font-weight: 700;
+	font-weight: 700; 
 	color: #fdb913;
 }
 .billbord__text {
@@ -5665,6 +5665,9 @@ input[type=number] {
 	border-radius: 10px;
 	width: 100%;
 	font-family: 'Manrope';
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .item-form input,
 .item-form textarea {
@@ -5690,6 +5693,24 @@ input[type=number] {
 	    -ms-flex-align: center;
 	        align-items: center;
 	cursor: pointer;
+}
+.item-form_error .jq-selectbox__select-text,
+.item-form_error input,
+.item-form_error textarea {
+	color: #db4446;
+	border-color: #db4446;
+}
+.item-form.item-form_error *::-webkit-input-placeholder {
+	color: #db4446;
+}
+.item-form.item-form_error *:-moz-placeholder {
+	color: #db4446;
+}
+.item-form.item-form_error *::-moz-placeholder {
+	color: #db4446;
+}
+.item-form.item-form_error *:-ms-input-placeholder {
+	color: #db4446;
 }
 .item-form .jq-selectbox {
 	width: 100%;
