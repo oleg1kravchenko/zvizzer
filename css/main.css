@@ -7051,12 +7051,17 @@ input[type=number] {
 	top: 0;
 	left: 0;
 }
+.file-upload {
+	position: relative;
+}
 .name-upload {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	margin-top: 5px;
-	font-size: 80%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    font-size: 62%;
+    line-height: 100%;
+    color: #818181;
 }
 .btn-main.btn-main_block {
 	padding: 0 37px;
@@ -7076,6 +7081,7 @@ input[type=number] {
 }
 .socials-list.socials-list_page a {
 	background: #fdb913;
+	border: 1px solid #fdb913;
 }
 .socials-list.socials-list_page a path {
 	fill: #000;
@@ -7899,6 +7905,9 @@ input[type=number] {
 .tabs-modals a:hover {
 	color: #000;
 }
+.socials-list.socials-list_page a:hover {
+	background: transparent;
+}
 }
 @media (hover: none) {
 .btn-user:active,
@@ -8027,7 +8036,10 @@ input[type=number] {
 .hide-password:active {
 	opacity: 1;
 }
-.tabs-modals a:hover {
+.tabs-modals a:active {
 	color: #000;
+}
+.socials-list.socials-list_page a:active {
+	background: transparent;
 }
 }
