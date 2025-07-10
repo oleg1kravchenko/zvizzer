@@ -17,9 +17,9 @@ body {
 }
 .row { 
 	margin: 0 -5px;
-}
+} 
 @media (max-width: 1600px) {
-	.container {
+	.container { 
 		max-width: 1270px;
 	}
 }
@@ -616,6 +616,7 @@ svg * {
 	line-height: 100%;
 	font-weight: 600;
 }
+
 .billbord__image {
     top: -23px;
     left: 100%;
@@ -626,6 +627,25 @@ svg * {
 .billbord__image img {
 	width: 894px;
 	height: auto;
+}
+.billbord__bg {
+	position: absolute;
+	display: block;
+	content: " ";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-image: url(../img/billbord_background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.billbord__img {
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 .billbord__slider:not(.slick-initialized) > *:not(:first-child) {
   display: none;
@@ -1099,6 +1119,7 @@ circle.progress {
 	max-width: 100%;
 	width: auto;
 	height: auto;
+	transition: all 1.5s;
 }
 .item-category ul li {
 	padding-left: 20px;
@@ -7684,6 +7705,26 @@ input[type=number] {
 	color: #525353;
 	font-weight: 800;
 }
+.page-mockup_error {
+	background-image: url(../img/error_background.jpg);
+}
+@supports (background-image: url('../img/error_background.webp')) {
+  .page-mockup_error {
+    background-image: url('../img/error_background.webp');
+  }
+}
+@supports (background-image: url('../img/error_background.avif')) {
+  .page-mockup_error {
+    background-image: url('../img/error_background.avif');
+  }
+}
+.mockup-block__value {
+	font-size: 100px;
+	line-height: 100%;
+	text-align: center;
+	color: #000;
+	font-weight: 600;
+}
 @media (max-width: 1600px) {
 .page-mockup {
     padding: 220px 0;
@@ -7708,6 +7749,9 @@ input[type=number] {
 }
 .mockup-block .btn-main {
     font-size: 16px;
+}
+.mockup-block__value {
+    font-size: 85px;
 }
 }
 @media (max-width: 1360px) {
@@ -7734,6 +7778,9 @@ input[type=number] {
 }
 .mockup-block .btn-main {
     font-size: 14px;
+}
+.mockup-block__value {
+    font-size: 75px;
 }
 }
 @media (max-width: 992px) {
@@ -7772,6 +7819,9 @@ input[type=number] {
 	.mockup-block .btn-main svg {
 		width: 40px;
 	}
+    .mockup-block__value {
+        font-size: 70px;
+    }
 }
 
 /*ховеры*/
@@ -7908,6 +7958,9 @@ input[type=number] {
 .socials-list.socials-list_page a:hover {
 	background: transparent;
 }
+.item-category:hover .item-category__image img {
+	transform: scale(1.07);
+}
 }
 @media (hover: none) {
 .btn-user:active,
@@ -8041,5 +8094,8 @@ input[type=number] {
 }
 .socials-list.socials-list_page a:active {
 	background: transparent;
+}
+.item-category:active .item-category__image img {
+	transform: scale(1.07);
 }
 }
