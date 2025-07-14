@@ -1052,6 +1052,12 @@ circle.progress {
             -ms-transform: rotate(-90deg) scale(0.55);
                 transform: rotate(-90deg) scale(0.55)
 	}
+	.billbord__bg {
+		top: 350px;
+	}
+	.billbord__bg svg {
+		height: auto;
+	}
 }
 
 /*категории*/
